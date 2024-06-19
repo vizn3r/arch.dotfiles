@@ -1,9 +1,6 @@
 *
 !*/
-
 !.gitignore
-
-!*i3
-!*picom
-!*kitty
-
+!/i3/**
+!/kitty/**
+!/picom/**
