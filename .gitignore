@@ -1,6 +1,10 @@
 *
 !*/
-!.gitignore
+
+!/.gitignore
+!/.zshrc
+!/README.md
+
 !/i3/**
 !/kitty/**
 !/picom/**
@@ -11,5 +15,3 @@
 !/rofi/**
 !/wal/**
 !/wal-discord/**
-!*zsh*
-!*README.md
