@@ -4,3 +4,10 @@
 !/i3/**
 !/kitty/**
 !/picom/**
+!/nvim**
+!/fastfetch/**
+!/glava/**
+!/polybar/**
+!/rofi/**
+!/wal/**
+!/wal-discord/**
