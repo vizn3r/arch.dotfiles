@@ -1,0 +1,1 @@
+/home/vizn3r/.zshrc
