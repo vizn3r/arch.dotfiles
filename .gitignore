@@ -1,0 +1,8 @@
+*
+!*/
+
+!.gitignore
+
+!./i3/*
+!./picom/*
+!./kitty/*
