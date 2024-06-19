@@ -13,7 +13,12 @@ include ./plasma.conf
 
 set $mod Mod1
 
+# Wallpapers
+
+# ryo5.jpg "https://danbooru.donmai.us/posts/7690240?q=yamada_ryo+"
+
 # Desktop config
+
 set $wallpaper $HOME/.config/i3/bgs/bg_*
 set $wal_dir $HOME/.cache/wal
 set $font "CaskaydiaCove Nerd Font"
@@ -47,6 +52,7 @@ assign [class="steam"] $ws4
 assign [class="YouTube Music"] $ws10
 
 # Window config
+
 font pango:CaskaydiaCove Nerd Font 8
 for_window [class="^.*"] border pixel 0
 
@@ -63,7 +69,6 @@ client.background       $bg
 
 
 exec_always picom --config $HOME/.config/picom/picom.conf
-
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Bar config
@@ -119,10 +124,15 @@ bindsym $mod+d exec --no-startup-id rofi -show run -config ./.cache/wal/colors-r
 bindsym $mod+p exec coreshot
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+set $left h
+set $down j
+set $up k
+set $right l
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -131,10 +141,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -143,10 +153,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+Shift+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+Shift+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -203,10 +213,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym $left resize shrink width 10 px or 10 ppt
+        bindsym $up resize grow height 10 px or 10 ppt
+        bindsym $down resize shrink height 10 px or 10 ppt
+        bindsym $right resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
