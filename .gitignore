@@ -11,3 +11,5 @@
 !/rofi/**
 !/wal/**
 !/wal-discord/**
+!*zsh*
+!*README.md
